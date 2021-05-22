@@ -7,13 +7,20 @@
                 humanPhone = document.getElementById('humanPhone').value;
                 homeAddress = document.getElementById('homeAddress').value;
 
-                humanPhone = parseInt(humanPhone);
 
 
-                if (nickname == '' || catMail == '' || humanName == '' || humanPhone == '' || homeAddress == '') {
-                    alert("Ты забыл заполнить какое-то поле!");
-                } else if (isNaN(humanPhone)) {
+                if (nickname == '') {
+                    alert("Ты забыл написать свою кличку!");
+                } else if (catMail == '') {
+                    alert("Котик, ты забыл почту!");
+                } else if (humanName == '') {
+                    alert("Будь внимательнее, нет имени человека!");
+                } else if (humanPhone == '') {
+                    alert('A телефон?');
+                } else if (isNaN(parseInt(humanPhone))) {
                     alert("В телефоне не должно быть букв!");
+                } else if (homeAddress == '') {
+                    alert('Соберись! Ты пропустил домашний адрес!');
                 } else {
                     alert(`Привет, ${nickname}!`);
                 }
